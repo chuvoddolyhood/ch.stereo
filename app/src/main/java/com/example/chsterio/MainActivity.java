@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 setTimeTotal();
                 setTimeSong();
                 imgDisk.startAnimation(animationRotate);
-                screenPhone.setBackgroundResource(R.drawable.trong_tri_nho_cua_anh);
+
             }
         });
 
@@ -130,6 +130,7 @@ public class MainActivity extends AppCompatActivity {
     private void initMediaPlayer(){
         mediaPlayer = MediaPlayer.create(MainActivity.this, arraySong.get(position).getFile());
         txtTitle.setText(arraySong.get(position).getTitle());
+        screenPhone.setBackgroundResource(arraySong.get(position).getPicture());
     }
 
     //Lay va dinh dang thoi gian theo bai hat
@@ -178,9 +179,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void addSong() {
         arraySong = new ArrayList<>();
-        arraySong.add(new Song("Trong Trí Nhớ Của Anh", R.raw.trong_tri_tho_cua_anh));
-        arraySong.add(new Song("Tình Đắng Như Ly Cafe", R.raw.tinh_dang_nhu_ly_cafe));
-        arraySong.add(new Song("Memories", R.raw.memories));
+        arraySong.add(new Song("Trong Trí Nhớ Của Anh", R.raw.trong_tri_tho_cua_anh, R.drawable.trong_tri_nho_cua_anh));
+        arraySong.add(new Song("Tình Đắng Như Ly Cafe", R.raw.tinh_dang_nhu_ly_cafe, R.drawable.tinh_dang_nhu_ly_cafe));
+        arraySong.add(new Song("Memories", R.raw.memories, R.drawable.momories));
     }
 
     private void anhXa() {

@@ -3,11 +3,12 @@ package com.example.chsterio;
 public class Song {
     private String Title;
     private int File;
+    private int Picture;
 
-
-    public Song(String title, int file) {
+    public Song(String title, int file, int picture) {
         Title = title;
         File = file;
+        Picture = picture;
     }
 
     public String getTitle() {
@@ -24,5 +25,13 @@ public class Song {
 
     public void setFile(int file) {
         File = file;
+    }
+
+    public int getPicture() {
+        return Picture;
+    }
+
+    public void setPicture(int picture) {
+        Picture = picture;
     }
 }
